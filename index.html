@@ -1,252 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faizan Ali - Developer Portfolio</title>
-    <link href="cdn.jsdelivr.net" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faizan Ali | Developer Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <script src="cdn.jsdelivr.net" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <header>
-        <nav>
-            <div class="container">
-                <h1>Faizan Ali</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Google Cloud Innovator | Full Stack Web & Android Application Developer</h2>
-                <p>MERN | Android Studio | Flutter | React & React Native | C++ | C# | SQL | PHP | Rust | GoLang | n8n | AI Automation</p>
-                <a href="#contact" class="btn">Get In Touch</a>
-            </div>
-            <div class="hero-image">
-                <!-- You can add a professional picture of yourself here -->
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBEQACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABwECBAUGAwj/xABBEAABAwMBBAgDBQUGBwAAAAABAAIDBAURIQYSMUEHEyJRYXGBkRQyoRVCcrHBI1KS0fAWM1RiwtI0Q1WDk6Lh/8QAGgEBAAIDAQAAAAAAAAAAAAAAAAIEAQMFBv/EADQRAAIBAwIEAggFBQEAAAAAAAABAgMEESExBRITQVFhIjJxgZGhsdEUQlLB8BUzQ2LhU//aAAwDAQACEQMRAD8AnFAEAQBAYV0u1vtFO2oulZDSQufuB8zw0F2CcewPssNpbkoxlJ4islbfdbfc49+31tPUtHEwyB2PZZyYlGUd0ZeUMFUAQBAEBTKA8aqspqOLraueOCMfeleGj3KGYpy2Ma2Xy13Z8rLbXwVT4sdYInhxbnhn2KwmmSnSnD1lg2CyQCAIAgCAIAgCAICJOmypMtTbrfkbrYnzkeJO6D9HLVUOlYQzCUiK4ZJaaobPTyPhnjPZkjcWub5EKBYeujJE2S6U7hRSRUt+Y6upyd0VDQBM3uyBo76HzUuphalWraxlrDRnWXbpXstBPJBDS11TIw4OIhGP/Yg/RZjWjJc0dUaVaVO+hpz0xSSE/DWFu4OBkq8H2DD+aOp5G+FgpLWXy/6Ub0u1gPascB8BVkf6FjqPwJ/06P6/l/0z6Tpbo3YFZaqiI8zFI2QD3wpdRGuXD5flkeW2PSLV0shobTSvppDGHOnqGjeGRkbreHqeY4LVC5hVjzU3oSo2K3qfAjOvrKmvnNTX1ElRNj55Xbx9O70RvJ0IxUFiKwb3ojuT4tvY4w8iKpppId3OhxhwPn2T7lbIaM512+dZJ9W05wQBAEAQBAEAQBAQ/wBM1O5t9oKnB3ZKQszjQFrif9a01Nzq8Peacl5kdmkfUvApmPkkJxuMaXE+y1ynGCzJ49pclHJ02y2yNwFQKyupupLP7pkjgDnvIXGvuJUuXp05Zzv9iCRdt1ZRSvpax7g4yExuxpqNR9M+yzwi5VRSp+Gv8+RLlyzmBHpxcPBugC7JLlK7nc9+fNDODY7OwCpvlDDI3IMwJHfjX9FUvajp205LwD2JF2jsUN6pgCRHUxg9VKRw8D4LzFjeztZ/6vdfuRWhGV6st4oyYX0ExbzkjG8HeWOK9RRvraqk4zRrqSbWIo2XRPQzu28t/WQyx9SyWRwcwjA3SOf4grsJRk9GUrjSGp9Drcc8IAgCAIAgCAIAgI/2lrqS6VrfiWQPpadxEbpmtIzwLtVzb9TqUn02014fQ7tpQ6UMvdmJY52AvgDWt+83DQPTReSuVJ4k2bGbblhVAeVVS09ZF1VXBFNHnO7IwOGfVbKdWdJ5g8PyBrn7M2WQ5NviH4SW/kVaXErtfnYLBsrZAf8AgWnze7+ay+J3b/P9DJmUlnttHIJKWhp4pBwe2Mbw9eK01Lu4qLlnNtAzlWMGLcpGR0chkaHZGADzK20k3NYBGW0d+rbXfaN1undDJSAS5B0c48j3jGmPEr1nC6SjB1O7+hWrpS9Fk5bJX6DaSxU1zgAaZG4ljznq5Bo5vofphdhPKOTOLhLDNyskQgCAIAgCAIDWbR1XwdnqZt7d7O7vd2eajN4iWLWCnWSex8/3a5y3GpMhdiJp/Yx50A5eqrpdjut5O4s8hNRSyfv4z6heSuI4Ul4GtnTrmAogKoCiZBXCAIDVX5x6uJviSrVtjLCIk2tBF+qN4akNxju3V62wx+Hj7/qVqnrHfdAtzLK26Whx7L2NqmN8QQxx+rPZdCBRuI6JkyjgplUqgCAIAgCAIDkulGQxbI1JBxlzWnyOR+q11PVLth/d9xDFppm1dfHFIMs+Z4PMBUbqq6VFyW51yRbLb4qiTNUJG04GGmPmR5aqhwyFpUnLryXN2TeM+fn8TmX1atTSVNPHd/z7G5+xLaP7u51EZ7utaMehGV23wa0l/i+Df3wc5cRqr86+CLHWmNv91eKiQj7rO2foVXlwCzWssxXm0l84klxSs9sP2Jv6MxjQ1TSB9oPyB2tMjPPmvJXUreFaUaKzFPTOM/LB2qMqkqadTcp8FVf49/8ACq/Uh+k2l9Hb5Zes+KuNREGvw14Yd0jAPHv1XpOGcPsb2gp683dZXyWPD26nKuryvQqYwsdtH89f4jK+xqHjJeZ3f99oH5LsR4HaL/E373+2Cm+JVf1pfAw7rZ6SOlDrfJNLMHD5jkOB46nA8VovLKwpUZKTVN9tXv4Yy3rttobKF5cSqJrMl307ePZaEdbb0DHUra1rQJonBjzjUtOn0OPcrmcLrNT6fZ/U7FaOmTK6ESf7bv8AGglz/FGu7Hco3HqE+DgthRKoAgCAIAgCA5XpNhM2xlfgfJuPPkHjKjP1S1ZyxWRDNgqYKa471RI2MOjLWlxwCcj/AOrl39Oc6OIrOp2JPBIdrutO2COGXeaQPnOoK8tWt5NtohzI3cc79wOjlJYeBDshaY1q1PSMmveRdOEt0VfLI4YdI4juzok61Wp60mzMacI7IsWomUQyXNe5mrHuafAkKUZOOz+ZBxT3ReZ5T/zHe63fiq+Mc7+JDo01+VGBWXOCncRJI6STm1pyfdRjRqVHklotEcHthX0zrdVRukayWU5jjLgSe0Cu5w6lNVYyS0Xf3EZyXLg9ugqndJtZW1GOxDQOaT4vezH0a5ekhuULh+ikToOC2FIqgCAIDB6+4PI6ukha3vln19mtP5pqSxHuy2R1dG0vmq6OJg5mI6epcsD0eyZjfH66Xmkd+CLe/Jyx7yfL/qY1zJr6CopJ6uSSGoidG/q7dK7QjHJHqiUPRkpJbeZ89Xamlo7lUUtQ1zZIXbjg5pafY8MjX1WnY6rlzao9rXd6i3uDQTJBziJ/LuVa4tYV1ro/Ewdzabq4xMqKKTejd908PIjvXna9vyy5ZrUkmdTQ10dawlvZkHzMPJc2pSdN+RNPJlrUSKIC2SRkUbnyuDWt4krKTbwjDZz9fdZagmODMcfsXefcr9Ogo6vc1uRw1/2jMT3U1ucA8Eh8w1we5vj4ruWlhzJTqr3fc1Sn2OVc5z3lz3Oc5x1JOSSuwkksI1ktdDlLLQWqruBM8LquUNYRQSzB0bOB3mjHzF3spxWhUuHmWCRPj36b11jj8JKJzfzIUjRg9oKqWZ25BdaKV/7oj19g/KGWsbpmRvXNgzikmPm6L9HLOpj0WVFVVDR9C4H/ACytI+uE1M8q7MobeZHE1FVUSDOjA/q2j+HBPqShjmxsi6O2UUbxI2mh6wDHWFoc73OqaBzk9GzKa3HDghEuQEf9Jewrr/GLnbA0XOJm65hOBUMGcDuDhyPoeREJRzqWqFfk9GWxCNRDLTVEtPUxuiniduyRvbhzT4hajoLVZNns3X/C1oikdiGbQ5OgdyP6KlfUOpT5orVGcnY0tcyKYPgnj32nTtj6rgypOSxgypI6mmuDqqBk1PSTPieMtflgB8suz9FzqlHkbjKS+f2JKWex6/ET/wCClPk9n+5R5YfqXz+xnmfgc9eLqyed0TnCFkRw5sjgDvd/HHsVfoW7gs75IORzO0d1bTW5wp5QZpew0tdnA5n+u9dKyt+pV9JaIhKWhwy75qOr2E2IrtrKuOQtfBamO/a1R+/g6sZ3njrwHnospZNVSqoLzPomgo4LfRw0dJGI6eBgjjY3g1oGAFtKLeXlmQdQhg8Z6aGoaWzxRyNPFr2hwPugTa2Mf7KpWj9i18Hd1MjmAegOEwT55Pd5LmUs7Bg1j5PGRjc/QD8kIvlfYzEMBAUPggOQ2t2ouOzlRLLLQdZQdWOolY3IdL+6857A4a4PH0UXLBYo0FVwk9f5sZex22NDtRC4RtdT1kbcy0zzkjllp+83OmfcDRIyTMVqEqW+xl7Q7L2faKIMulG2VzR2JWktkZ5OGuPDgstJmuFWUPVZH1z6HpGTdbZruA0HLY6qPUH8bf5LW6edC1G8/Ujmb4L5s1PHS3ptFVvcMjqn7xx/mwNPZc6pw6n2eC3CaqLKXyNVLthd2ndpKx1HC0aRNaxwHjlzcqMOGW+PTjzPx1X0ZPmwWf2wv/8A1iT/AMUf+1T/AKbZ/wDn839x1C5+1dVLmRlDEJPvSEl2vsPzWtcMgtHLTwIZb7HRUXR3tHtPFBXVd0tzaV7d6GSJ3WDB44DQBy710KNvCksQRVncRWmDs9n+iWw20sluTpLpO05/bDciB/ADr5OJW9RRXlXlLbQ7+KNkcbGRsaxjQA1rRgAdwUjSXoAgCAIAgCAIAgPGqpoquCSCojbJDK0sexwyHA8kMptPKI0tmzUGzV9qqqAuklglPVZBLhCQCANdTxGfDzXm+I31WjX6UNFudhPr0k2SDb7rT1TGjeDJeBY44OV1LLiFO6WFpLuv39hzatCdN67HvWVtLRwmarqIoY28XyPDR9VfbwaYxcnhIgm/WK7VNRV3dskNfTSyPl62B5cSzJwcEDlyGVzHf0Os6Tlh+Z3acsRSxg5uWYGANY4NdunUnic/yVtGxtYN9tXdbFXuofsKg+CEcbhLlgbvnTA8cYOvittWSljBVtY1Ic3PLOdtTUWS3Vt2kkjt0JkIcSXaBrQe8nQKrWr06C5qjwboyWGyYOii21dpt9xpKyeFxFSHNhicXCLLATqQOPd5nmp2dxC4p88M48zm3qXUR3itlMIAgCAIAgCAIAgCAIDT3y2SVO7U0gBqIxulpOBI3uzyPcuVxPh6uoJx9ZFq2uOk8PYhzpBlqH3FtLUUU1JFCd8dYzd6x/N2eBHLTxWnh1lK2g3U9Z/JeB1acoz1izlCI3vDnHffnQk5I8l0jZjBKdja6LZ2308ji104ZHukYwHnOR6FeVrRVW9emmd/ka5vdnI7cWisi2iutTDRSMomS9l7I8NDQAO/gvSOvRVTpqSyuxroNunFmtuGz9bDJR00Y+IkraVtS1sLd4hp7+HctlWcKUeabwjMZ9RNeeDv9jbdNbdk6OOeOSGY1MweCztY4jPH+iuNxfp1qUKsNdWtGaoejVlHPZHUbHtc28XvIwxxp3N/gI/RXeDNfhsYxhsrXu8WdYuuUQgCAIAgCAIAgCAIAgCA85YY5mlsrGvafuuGQgy1sY7bdRREOio6ZjgdC2FoI+ixglzS8SJoItqJLjCysnHwkVQxzJtxnbG+McOGQV5uD4fGonBek3tl6HbljkfsOvvTI56iuglhc5ry4OIbxGNRlc2+nKF7OSez0+Rqof24+w1tNSMiqKGZwMj47TBEMN5Auz76eyv8YuepGnGOz1+37iivWz4syL824SWOmdaZRBO2eQhrmDt4Z8uDwyVij0fwFNXCynL4eZiOOtL2I9+jT7WP2lJenYmc6Ldjw3sjB107/wBF1eG/hlGSt9ivfbx953K6hQCAIAgCAIAgCAIAgCAIAgPOeWOGJ8srw2OMFz3E6ADiUGMkE0m0d3qbpR28SxOjdWxMGGdrHWDTOO5ciHDrdVuok8+071RctN+ws25ulRT7WXJ0M8oEVUDutkI4YyrNW3pzcsxWvkYo4VvE2229wljp7PutfCJLfFK7ceRk4OAfLKg7WCnFtZwsaojaaqTfiUiuldT9H1FXU0odJFcJWudJ28gjhr/WizWtKVWjySWmexFYdzJeSOj6Kr3PdZ7o2ulYZx1bmMaAOyN4HA9vdbLO2p28XGCK1/HHK+xIquHPCAIAgCAIAgCAIAgCAIAgOK26s20l3zFbrhSU9rEQMkRLmve4ZzkgHI4aZHBY5JSeEyxRr0qMXNxbaNNa9laHY+1ybR1j5K+sgi3qdjIuwxztAQOOdeJOAFF0+m3kmrp3aiorCZw1u2fvG1l5a2cSMjnfv1FQ5pbgE6kZGp445LEKUpLmexZub2lRapp5l2S/fy+pJfSVs/8AFW2mraFjRLRNMQh4B0bsDHmOXmVJ0pVNI7lShfU7XLreq+/g/scn0ftMk9bsxe6WpZTV43mMMTmuilaOOT8uQOOMZA79YQ/Sy3ctYVanJaGbH0fXq03vrNn7vC2WMb0b5d5ji3mHYaQR6arZ0Wo86ZXXEoTk6VSHw/mhKFrbWMoKdtyfDJWCMCZ8IIY53MjPJEVJYzpsZayYCAIAgCAIAgCAIAgCAIC17GuaWuAIOhB5oYaTWGAxrWhoAAAwAEYSSWEYzqXerY584DGFu73nl+qmp+g4mt081VMvrITPTSxMO65zcB3cViEuWSZmrDng4+J6RRhjGs47rcZWG8vJKK5VgqImdYZN0b5Abvc8DkmXjBnlWebuXrBkIAgCAIAgCAIAgCAIAgCAo4hrSTwCAwX1L3fL2QgPMveeL3e6yCm87953usAvbNK3g8nzQGXTzdaCCMEID2QBAEAQBAEAQBAEAQBAEAQFCgMeSladWHCA8jSSci33QD4WTw90MF7aR33nD0CGTIjjbG3DRhAXoAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgCAIAgP/9k=" alt="Faizan Ali">
-            </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Faizan Ali</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero" class="hero-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-md-6 text-white">
+        <h1 class="fw-bold">Faizan Ali</h1>
+        <h4 class="text-warning">
+          Google Cloud Innovator | Full Stack Developer
+        </h4>
+        <p class="mt-3">
+          MERN • Flutter • React • Android • AI Automation • Cloud
+        </p>
+        <a href="#contact" class="btn btn-warning btn-lg mt-3">
+          Get In Touch
+        </a>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img
+          src="YOUR_IMAGE_HERE"
+          class="img-fluid rounded-circle profile-img"
+          alt="Faizan Ali"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <p class="text-center">
+      Google Cloud Innovator & Full Stack Developer skilled in MERN, Flutter,
+      React, Android, AI automation, and cloud technologies.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Languages</h5>
+          <p>C++, JavaScript, Dart, Go, Rust, PHP, SQL</p>
         </div>
-    </section>
+      </div>
 
-    <section id="about" class="section-alt">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>
-                As a Google Cloud Innovator and a versatile Full Stack Web & Android Application Developer, I bring a robust skill set in modern technologies including MERN stack, Flutter, React, and various programming languages like C++, C#, Rust, and GoLang. I am passionate about building innovative solutions and leveraging AI automation to enhance application functionality and user experience. My experience ranges from developing web applications to managing logs and performing data analysis. I am constantly seeking new challenges and opportunities to grow my expertise in the ever-evolving tech landscape.
-            </p>
-            <p><strong>Date of birth:</strong> 15/12/2005</p>
-            <p><strong>Place of birth:</strong> Multan, Pakistan</p>
-            <p><strong>Nationality:</strong> Pakistani</p>
-            <p><strong>Gender:</strong> Male</p>
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Frameworks</h5>
+          <p>React, Flutter, MERN, Android Studio</p>
         </div>
-    </section>
+      </div>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>C#</li>
-                        <li>SQL</li>
-                        <li>React</li>
-                        <li>Dart</li>
-                        <li>GoLang</li>
-                        <li>ReactNative</li>
-                        <li>Rust</li>
-                        <li>Kotlin</li>
-                        <li>PHP</li>
-                        <li>C++</li>
-                        <li>JavaScript</li>
-                        <li>asm</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Technologies</h3>
-                    <ul>
-                        <li>MERN Stack</li>
-                        <li>Android Studio</li>
-                        <li>Flutter</li>
-                        <li>React & React Native</li>
-                        <li>n8n</li>
-                        <li>AI Automation</li>
-                        <li>Google Cloud</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Other Skills</h3>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>Android Development</li>
-                        <li>Full Stack Development</li>
-                        <li>Data Analysis (Python, Excel)</li>
-                        <li>Web Maintainer & Logs Management</li>
-                    </ul>
-                </div>
-            </div>
-            <h3>Language Skills</h3>
-            <p><strong>Mother Tongue:</strong> Urdu</p>
-            <p><strong>English:</strong> Listening A1, Reading A1, Spoken Interaction A2, Spoken Production A2, Writing A2</p>
+      <div class="col-md-4">
+        <div class="card skill-card">
+          <h5>Other</h5>
+          <p>Cloud, AI Automation, Data Analysis</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="experience" class="section-alt">
-        <div class="container">
-            <h2>Work Experience</h2>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
 
-            <div class="job-item">
-                <h3>Google Cloud Innovator</h3>
-                <p>Google California, United States | 01/01/2024 – Current</p>
-                <p><a href="https://cloud.google.com/" target="_blank">https://cloud.google.com/</a></p>
-            </div>
+    <div class="timeline-item">
+      <h5>Google Cloud Innovator</h5>
+      <span>2024 – Present</span>
+    </div>
 
-            <div class="job-item">
-                <h3>Full Stack Web Developer</h3>
-                <p>BixiSoft Multan, Pakistan | 01/03/2025 – 01/07/2025</p>
-                <p>Full Stack Developer</p>
-                <p><a href="https://bixisoft.com/" target="_blank">https://bixisoft.com/</a></p>
-            </div>
+    <div class="timeline-item">
+      <h5>Full Stack Developer – BixiSoft</h5>
+      <span>2025</span>
+    </div>
+  </div>
+</section>
 
-            <div class="job-item">
-                <h3>AISEC - International Students Organization (Volunteer Experience)</h3>
-                <p>Multan, Pakistan | 01/02/2025 – Current</p>
-                <p><a href="https://aiesec.org/" target="_blank">https://aiesec.org/</a></p>
-            </div>
+<!-- CONTACT -->
+<section id="contact" class="section bg-dark text-white">
+  <div class="container">
+    <h2 class="section-title text-white">Contact</h2>
 
-            <div class="job-item">
-                <h3>Web & Logs Manager</h3>
-                <p>Magsi Traders Multan, Pakistan | 01/05/2024 – Current</p>
-                <p>Web Maintainer & Logs Manager</p>
-                <p><a href="https://redchillipakistan.com/" target="_blank">https://redchillipakistan.com/</a></p>
-            </div>
+    <div class="text-center">
+      <p><i class="fas fa-envelope"></i> faizanali15111511@gmail.com</p>
+      <p><i class="fab fa-linkedin"></i> linkedin.com/in/faizanali2k05</p>
+    </div>
 
-            <div class="job-item">
-                <h3>Data Analyst</h3>
-                <p>Inovista Multan, Pakistan | 01/10/2024 – 01/02/2025</p>
-                <p>Data analysis of Excel sheets using Python data structures</p>
-                <p><a href="https://innovista.pk/" target="_blank">https://innovista.pk/</a></p>
-            </div>
-        </div>
-    </section>
+    <form
+      action="https://formspree.io/f/xwpalbqp"
+      method="POST"
+      class="contact-form mx-auto mt-4"
+    >
+      <input class="form-control mb-3" type="text" name="name" placeholder="Name" required />
+      <input class="form-control mb-3" type="email" name="_replyto" placeholder="Email" required />
+      <textarea class="form-control mb-3" name="message" rows="4" placeholder="Message"></textarea>
+      <button class="btn btn-warning w-100">Send</button>
+    </form>
+  </div>
+</section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education and Training</h2>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© <span id="year"></span> Faizan Ali</p>
+</footer>
 
-            <div class="edu-item">
-                <h3>Advance Web Application Development</h3>
-                <p>NAVTTC, Multan, Pakistan | 01/02/2025 – 30/06/2027</p>
-                <p><a href="https://nsis.navttc.gov.pk/" target="_blank">https://nsis.navttc.gov.pk/</a></p>
-            </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-            <div class="edu-item">
-                <h3>Bachelors in Computer Science</h3>
-                <p>Air University Islamabad, Multan Campus, Multan, Pakistan | 01/10/2023 – CURRENT</p>
-                <p><a href="https://aumc.edu.pk/" target="_blank">https://aumc.edu.pk/</a></p>
-            </div>
-
-            <div class="edu-item">
-                <h3>English Access Microscholarship Program</h3>
-                <p>U.S. Department of State, Multan | 02/02/2024 – CURRENT</p>
-                <p><a href="https://exchanges.state.gov/" target="_blank">https://exchanges.state.gov/</a></p>
-            </div>
-
-            <div class="edu-item">
-                <h3>Intermediate/A-level</h3>
-                <p>Kips College Multan Campus, Multan, Pakistan | 01/09/2021 – 01/05/2023</p>
-                <p><a href="https://kips.edu.pk/" target="_blank">https://kips.edu.pk/</a></p>
-            </div>
-
-            <div class="edu-item">
-                <h3>Matriculation/O-level</h3>
-                <p>Zamir Public School, Multan, Pakistan | 01/01/2019 – 01/07/2021</p>
-                <p><a href="https://www.facebook.com/zamirpublicschoolmultan/" target="_blank">https://www.facebook.com/zamirpublicschoolmultan/</a></p>
-            </div>
-        </div>
-    </section>
-
-    <section id="conferences" class="section-alt">
-        <div class="container">
-            <h2>Conferences and Seminars</h2>
-
-            <div class="conf-item">
-                <h3>Cyber Hackathon Workshop</h3>
-                <p>Multan | 18/09/2024 – 20/09/2024</p>
-                <p>Hands-on the cybersecurity basics and worked on tools</p>
-                <p><a href="https://cyberhackathon.pk" target="_blank">https://cyberhackathon.pk</a></p>
-            </div>
-
-            <div class="conf-item">
-                <h3>Build with AI-Google (GDG-Workshop)</h3>
-                <p>Multan | 05/04/2025</p>
-                <p>Build Applications with AI</p>
-            </div>
-
-            <div class="conf-item">
-                <h3>United States Consulates International Scholarships Workshop</h3>
-                <p>Islamabad | 01/02/2025 – 09/02/2025</p>
-                <p>Exposure to US consulates improved my knowledge of International Scholarships hunting</p>
-                <p><a href="https://pk.usembassy.gov/" target="_blank">https://pk.usembassy.gov/</a></p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Street # 2 928 X/EX Gulgusht Colony, 60700 Multan, Pakistan</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:faizanali15111511@gmail.com">faizanali15111511@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> (+92) 3085560981</p>
-                <p><i class="fab fa-whatsapp"></i> +923085560981 (WhatsApp)</p>
-                <p><i class="fas fa-globe"></i> <a href="https://faizanali2k05.netlify.app/" target="_blank">faizanali2k05.netlify.app/</a></p>
-                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/faizanali2k05/" target="_blank">linkedin.com/in/faizanali2k05/</a></p>
-            </div>
-
-            <h3>Send me a message!</h3>
-            <form action="https://formspree.io/f/xwpalbqp" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Faizan Ali. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/faizanali2k05/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/faizanali2k05" target="_blank"><i class="fab fa-github"></i></a>
-                <!-- Add other social links as needed -->
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
